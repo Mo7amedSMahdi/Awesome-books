@@ -43,7 +43,7 @@ function loadContent() {
                       <h4 class="text-1">"${obj.title}"</h4>
                       <h3 class="text-1">by ${obj.author}</h3>
                     </div>
-                    <button type="button" onclick="removeBook(this)" data-id="${obj.id}">Remove</button>
+                    <button type="button" onclick="removeBook(this)" class="btn" data-id="${obj.id}">Remove</button>
                 </div>`;
   });
 }

@@ -59,10 +59,10 @@ div.books__list > div:nth-of-type(odd) {
   padding: 10px 0;
 }
 
-#removeBtn {
+.btn {
   font-size: 1rem;
   padding: 3px;
-  box-shadow: 2px 2px #8888;
+  box-shadow: 4px 7px 4px 0 #000;
 }
 
 .line {
