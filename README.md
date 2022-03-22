@@ -4,23 +4,6 @@
 
 This is a web site for storing books and authors.
 
-# Who is IT.LIVE
-
-It is the first Iraqi conference concerned with raising various issues
-related to information technology, as this field
-has not been addressed across the country through previous conferences and activities, and this is
-what our conference
-aims to achieve.
-What can we look forward to in #IT_Live_2017?
-There will be a number of experts in this field discussing different topics, a number of
-competitions, entertainment
-events and gifts, companies and individuals with experience in this field who will present their
-ideas and other
-activities that will be announced soon.
-When is the conference date?
-End of February 2017, dates and times will be announced soon along with the application form for
-attendees and speakers.
-
 # Screen Shots
 
 ## Desktop Version
@@ -60,10 +43,13 @@ to test or run the application double click on the `index.html` file to open in 
 - Twitter: [@devMo7amed](https://twitter.com/devMo7amed)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammed-mahdi-b20340162/)
 
-## 🤝 Contributing
+👤 **Ranjit Luwang**
 
-Thanks for [@Mayengbam Ranjit Luwang](https://github.com/aboongm)
-for Helping me with this project.
+- GitHub: [@aboongm](https://github.com/aboongm)
+- Twitter: [@John_luang1](https://twitter.com/John_luang1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mayengbam-ranjit-luwang-31962418/)
+
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
