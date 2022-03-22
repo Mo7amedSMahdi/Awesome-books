@@ -33,8 +33,8 @@ function loadContent() {
   BooksObject.forEach((obj, index) => {
     booksList.innerHTML += `<div class="${index} book-container">
                     <div class="book">
-                      <h4>${obj.title}</h4>
-                      <h3>by ${obj.author}</h3>
+                      <h4 class="text-1">${obj.title}</h4>
+                      <h3 class="text-1">by ${obj.author}</h3>
                     </div>
                     <button type="button" onclick="removeBook(this.parentElement)" id="removeBtn">Remove</button>
                 </div>`;
