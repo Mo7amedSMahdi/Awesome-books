@@ -6,6 +6,28 @@ const KEY = 'BOOKS_LIST';
 
 let BooksObject = [];
 
+class Books {
+  constructor() {
+    this.BooksObject = [];
+  }
+
+  add() {
+    this.BooksObject.push({
+      id: this.BooksObject.length,
+      title: book.value,
+      author: author.value,
+    });
+    localStorage.setItem('BOOKS_LIST', JSON.stringify(this.BooksObject));
+  }
+
+  remove(element) {
+    const id = element.parentElement.className;
+    element.remove();
+    this.BooksObject.splice(parseInt(id, 10), 1);
+    localStorage.setItem('BOOKS_LIST', JSON.stringify(this.BooksObject));
+  }
+}
+
 function loadContent() {
   booksList.innerHTML = '';
   BooksObject.forEach((obj, index) => {
@@ -17,30 +39,6 @@ function loadContent() {
   });
 }
 
-function updateLocalStorage() {
-  localStorage.setItem(KEY, JSON.stringify(BooksObject));
-}
-
-function addNewBook() {
-  BooksObject.push({
-    id: BooksObject.length,
-    title: book.value,
-    author: author.value,
-  });
-  updateLocalStorage();
-  loadContent();
-}
-/* eslint-disable */
-
-function removeBook(element) {
-  const id = element.parentElement.className;
-  element.remove();
-  BooksObject.splice(parseInt(id), 1);
-  updateLocalStorage();
-}
-
-/* eslint-enable */
-
 function checkLocalStorage() {
   if (JSON.parse(localStorage.getItem(KEY)) != null) {
     BooksObject = JSON.parse(localStorage.getItem(KEY));
@@ -48,6 +46,20 @@ function checkLocalStorage() {
   }
 }
 
-addBtn.addEventListener('click', addNewBook);
+const books = new Books();
+
+function addBook() {
+  books.add();
+  loadContent();
+}
+
+/* eslint-disable */
+
+function removeBook(element) {
+  books.remove(element);
+}
+/* eslint-enable */
+
+addBtn.addEventListener('click', addBook);
 
 document.addEventListener('DOMContentLoaded', checkLocalStorage);
