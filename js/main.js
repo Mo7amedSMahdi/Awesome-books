@@ -8,10 +8,14 @@ let BooksObject = [];
 
 class Books {
   constructor() {
-    this.BooksObject = [];
+    if (JSON.parse(localStorage.getItem(KEY)) != null) {
+      this.BooksObject = JSON.parse(localStorage.getItem(KEY));
+    } else {
+      this.BooksObject = [];
+    }
   }
 
-  add() {
+  add(book, author) {
     this.BooksObject.push({
       id: this.BooksObject.length,
       title: book.value,
@@ -21,22 +25,25 @@ class Books {
   }
 
   remove(element) {
-    const id = element.parentElement.className;
-    element.remove();
-    this.BooksObject.splice(parseInt(id, 10), 1);
+    const id = element.dataset.id;
+    element.parentElement.remove();
+    this.BooksObject.splice(
+      this.BooksObject.findIndex((item) => item.id === parseInt(id, 10)),
+      1
+    );
     localStorage.setItem('BOOKS_LIST', JSON.stringify(this.BooksObject));
   }
 }
 
 function loadContent() {
   booksList.innerHTML = '';
-  BooksObject.forEach((obj, index) => {
-    booksList.innerHTML += `<div class="${index} book-container">
+  BooksObject.forEach((obj) => {
+    booksList.innerHTML += `<div class="book-container">
                     <div class="book">
                       <h4 class="text-1">"${obj.title}"</h4>
                       <h3 class="text-1">by ${obj.author}</h3>
                     </div>
-                    <button type="button" onclick="removeBook(this.parentElement)" id="removeBtn">Remove</button>
+                    <button type="button" onclick="removeBook(this)" data-id="${obj.id}">Remove</button>
                 </div>`;
   });
 }
@@ -51,7 +58,8 @@ function checkLocalStorage() {
 const books = new Books();
 
 function addBook() {
-  books.add();
+  books.add(book, author);
+  checkLocalStorage();
   loadContent();
 }
 
