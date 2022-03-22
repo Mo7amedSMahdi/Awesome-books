@@ -12,7 +12,6 @@ body {
   max-width: 1020px;
   height: 80vh;
   margin: 0 auto;
-  border: 1px solid black;
   text-align: center;
   display: flex;
   flex-direction: column;
