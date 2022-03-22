@@ -41,6 +41,7 @@ body {
 div.books__list > div:nth-of-type(odd) {
   background: #e0e0e0;
 }
+
 .book {
   display: flex;
   align-items: center;
