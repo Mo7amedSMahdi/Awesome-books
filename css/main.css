@@ -12,9 +12,13 @@ body {
   line-height: 18px;
 }
 
+ul {
+  list-style: none;
+}
+
 .container {
   max-width: 1020px;
-  height: 80vh;
+  height: 100vh;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -38,11 +42,11 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 1.2rem 1rem;
+  padding: 0 20px;
   height: 30px;
 }
 
-.book-container:nth-of-type(odd) {
+div.books__list > div:nth-of-type(odd) {
   background: #e0e0e0;
 }
 
@@ -56,14 +60,13 @@ body {
 }
 
 .pad {
-  padding: 10px 0;
+  padding: 22px 0;
 }
 
 .btn {
   font-size: 1rem;
   padding: 3px;
   box-shadow: 4px 7px 4px 0 #000;
-  z-index: 1;
 }
 
 .line {
@@ -87,10 +90,6 @@ body {
   flex-direction: column;
 }
 
-.newbook__form input[type='text'] {
-  border: 4px solid black;
-}
-
 #book,
 #author {
   width: 100%;
@@ -101,4 +100,93 @@ body {
 .text-1 {
   font-size: 1rem;
   padding: 8px;
+}
+
+.header-container {
+  width: 98%;
+  position: fixed;
+  top: 10px;
+  margin: 0 auto;
+  border: 1px solid blue;
+}
+
+.navigation {
+  border: 4px solid black;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu li {
+  padding: 8px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.gap-line {
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+
+footer {
+  border: 4px solid black;
+  display: flex;
+  width: 98%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 10px;
+  margin: 0 auto;
+  height: 48px;
+}
+
+.list:hover,
+.list:focus,
+.add:hover,
+.add:focus,
+.contact:hover,
+.contact:focus {
+  color: rgb(126, 126, 128);
+  /* font-weight: bold; */
+  cursor: pointer;
+}
+
+li::before {
+  color: rgb(47, 45, 65);
+  font-weight: bold;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+#date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid red;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.contact-info {
+  width: 640px;
+  border: 1px solid black;
+}
+
+.contact-text-1 {
+  padding: 2rem 0;
 }
