@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Awesome Books</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/main.css" />
-  <title>Awesome Books</title>
-</head>
-
-<body>
-  <section class="container">
-    <h1 class="pad">All awesome Books</h1>
-    <div>
-      <div class="books__list"></div>
-      <div class="line">
-        <div class="line-2"></div>
-      </div>
+  <body>
+    <section class="container">
+      <header class="header-container">
+        <nav class="navigation">
+          <h2>Awesome Books</h2>
+          <ul class="menu">
+            <li class="list">List</li>
+            <li class="gap-line add">Add New</li>
+            <li class="contact">Contact</li>
+          </ul>
+        </nav>
+        <div id="date"></div>
+      </header>
       <div>
-        <h1 class="pad">Add a new book</h1>
-      </div>
-      <div class="newbook__form">
-        <label for="book"></label>
-        <input type="text" name="book" class="data" id="book" placeholder="Title" />
-        <br />
-        <label for="author"></label>
-        <input type="text" name="author" class="data" id="author" placeholder="Author" />
-        <br />
-        <input type="submit" class="text-1 btn" id="submit" value="Add" />
-      </div>
-    </div>
-  </section>
+        <div class="hide">
+          <h1 class="pad">All awesome books</h1>
+          <div class="books__list"></div>
+        </div>
+        <div class="add-book">
+          <h1 class="pad">Add a new book</h1>
 
-  <script src="./js/main.js"></script>
-</body>
+          <div class="newbook__form">
+            <label for="book"></label>
+            <input type="text" name="book" class="data" id="book" placeholder="Title" />
+            <br />
+            <label for="author"></label>
+            <input type="text" name="author" class="data" id="author" placeholder="Author" />
+            <br />
+            <input type="submit" class="text-1 btn" id="submit" value="Add" />
+          </div>
+        </div>
+      </div>
+      <!-- <h1 class="pad">All awesome Books</h1>
+      <div>
+        <div class="books__list"></div>
+        <div class="line">
+          <div class="line-2"></div>
+        </div>
+        <div>
+          <h1 class="pad">Add a new book</h1>
+        </div>
+        <div class="newbook__form">
+          <label for="book"></label>
+          <input type="text" name="book" class="data" id="book" placeholder="Title" />
+          <br />
+          <label for="author"></label>
+          <input type="text" name="author" class="data" id="author" placeholder="Author" />
+          <br />
+          <input type="submit" class="text-1 btn" id="submit" value="Add" />
+        </div>
+      </div> -->
+    </section>
 
+    <script src="./js/main.js"></script>
+  </body>
 </html>
