@@ -31,12 +31,9 @@ class Books {
   }
 
   remove(element) {
-    const id = element.dataset.id;
+    const { id } = element.dataset;
     element.parentElement.remove();
-    this.BooksObject.splice(
-      this.BooksObject.findIndex((item) => item.id === parseInt(id, 10)),
-      1
-    );
+    this.BooksObject.splice(this.BooksObject.findIndex((item) => item.id === parseInt(id, 10)), 1);
     localStorage.setItem('BOOKS_LIST', JSON.stringify(this.BooksObject));
   }
 }
@@ -67,18 +64,26 @@ function addBook() {
   books.add(book, author);
   checkLocalStorage();
   loadContent();
+  book.value = '';
+  author.value = '';
+  booksList.parentElement.classList.remove('hide');
+  author.parentElement.parentElement.classList.add('hide');
+  contactInfo.classList.add('hide');
 }
 
+/* eslint-disable */
 function removeBook(element) {
   books.remove(element);
 }
+/* eslint-enable */
 
 addBtn.addEventListener('click', addBook);
-list.addEventListener('click', (e) => {
+list.addEventListener('click', () => {
   booksList.parentElement.classList.remove('hide');
   author.parentElement.parentElement.classList.add('hide');
   contactInfo.classList.add('hide');
 });
+
 add.addEventListener('click', () => {
   author.parentElement.parentElement.classList.remove('hide');
   booksList.parentElement.classList.add('hide');
@@ -93,7 +98,7 @@ contact.addEventListener('click', () => {
 
 const getDateTime = () => {
   const date = new Date();
-  let options = {
+  const options = {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
